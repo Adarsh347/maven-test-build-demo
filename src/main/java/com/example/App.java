@@ -2,9 +2,11 @@ package com.example;
 
 public class App {
 
-    public static void main(String[] args) {
-        AppText text = new AppText();
+    public static String getMessage() {
+        return "Hello from Maven + Jenkins!";
+    }
 
-        System.out.println(text.getMessage());
+    public static void main(String[] args) {
+        System.out.println(getMessage());
     }
 }
