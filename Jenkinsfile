@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credss')
-        IMAGE_NAME = "adarsh347/jenkins-demo"
+        IMAGE_NAME = "adarshs347/jenkins-demo"
         PATH = "/usr/local/bin:/opt/homebrew/bin:${env.PATH}"
     }
 
