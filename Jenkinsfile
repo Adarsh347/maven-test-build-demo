@@ -31,6 +31,18 @@ pipeline {
             }
         }
 
+        stage('Trivy Scan') {
+            steps {
+                sh '''
+                    trivy image \
+                    --severity HIGH,CRITICAL \
+                    --ignore-unfixed \
+                    --exit-code 1 \
+                    maven-test-build-demo:latest
+                '''
+            }
+        }
+
         stage('Login to Docker Hub') {
             steps {
                 sh '''
