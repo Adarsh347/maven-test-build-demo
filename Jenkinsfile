@@ -38,7 +38,7 @@ pipeline {
                     --severity HIGH,CRITICAL \
                     --ignore-unfixed \
                     --exit-code 1 \
-                    maven-test-build-demo:latest
+                    ${IMAGE_NAME}:latest
                 '''
             }
         }
